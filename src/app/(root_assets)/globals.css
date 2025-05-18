@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #dddad1;
+  --foreground: #00341d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-mono: var(--font-space-mono);
+  --font-heading: var(--font-archivo-black);
+}
+
+/**
+* @NOTE This is for themeing
+*/
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #00341d;
+    --foreground: #dddad1;
+  }
+} */
+
+body {
+  height: 100dvh;
+  background: var(--background);
+  color: var(--foreground);
+  /* Use the variable directly as defined in layout.tsx */
+  font-family: var(--font-space-mono, monospace);
+}
+
+@layer base {
+  body,
+  .bg-gradient {
+    @apply bg-[linear-gradient(135deg,_#dddad1,_#ffffff)];
+  }
+  .bg-light {
+    @apply bg-[#dddad1]
+  }
+  .bg-dark {
+    @apply bg-[#00341d];
+  }
+  .font-black {
+    font-family: var(--font-archivo-black);
+    font-weight: 400;
+  }
+}
