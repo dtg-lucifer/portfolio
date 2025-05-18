@@ -20,6 +20,18 @@ const projects: Project[] = [{
     "Socket.io",
     "Electron",
   ],
+}, {
+  name: "Starty",
+  description:
+    "A centralised reddit like platform to share and find out more startups matching your interests. Build with Next.js v15, TailwindCSS, and Sanity.io for the headless CMS and handling all of the data.",
+  image: "/projects/starty_demo.webp",
+  repoUrl: "https://github.com/dtg-lucifer/starty",
+  demoUrl: "https://github.com/dtg-lucifer/starty",
+  tags: [
+    "Next.js@15",
+    "TailwindCSS",
+    "Sanity.io",
+  ],
 }];
 
 export const useProjects = async (): Promise<Project[]> => {
