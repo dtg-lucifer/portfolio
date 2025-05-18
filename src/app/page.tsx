@@ -3,6 +3,7 @@
 import About from "@/components/about";
 import Hero from "@/components/hero";
 import Info from "@/components/info";
+import Projects from "@/components/projects";
 import LocomotiveScroll from "locomotive-scroll";
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -83,13 +84,16 @@ export default function Home() {
               <section id="about" className="p-20 about__section">
                 <About />
               </section>
+              <section id="projects" className="p-20 projects__section">
+                <Projects />
+              </section>
             </div>
             <Image
               alt="bg"
               src="/bg.svg"
               width={screenWidth}
               height={screenHeight}
-              className="-z-10 fixed inset-0 w-full h-full object-cover"
+              className="-z-10 fixed inset-0 w-full h-full object-cover pointer-events-none select-none"
             />
           </React.Fragment>
         )}
