@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const Hero = ({ height }: { height: number }) => {
+const Hero = ({}: { height: number }) => {
   return (
     <div
       className={`grid flex-1 place-items-center min-h-screen`}

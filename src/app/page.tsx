@@ -34,13 +34,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollX(window.scrollX);
-      setScrollY(window.scrollY);
-
-      console.log("Scroll Y:", scrollY, "Scroll X:", scrollX);
-    };
-
     (
       async () => {
         const locomotiveScroll = (await import("locomotive-scroll")).default;
@@ -48,13 +41,11 @@ export default function Home() {
       }
     )();
 
-    window.addEventListener("scroll", handleScroll);
     const t = setTimeout(() => {
       setLoading(false);
     }, 1000);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       clearTimeout(t);
     };
   }, []);

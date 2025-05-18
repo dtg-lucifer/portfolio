@@ -1,4 +1,5 @@
 import { Project } from "@/hooks/useProjects";
+import Image from "next/image";
 import React from "react";
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -36,7 +37,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </a>
         </div>
       </div>
-      <img src={project.image} alt={project.name} className="w-full h-auto" />
+      <Image
+        src={project.image}
+        alt={project.name}
+        width={500}
+        height={300}
+        className="w-full h-auto"
+      />
     </article>
   );
 };

@@ -7,7 +7,7 @@ export interface Project {
   tags: string[];
 }
 
-const projects: Project[] = [{
+export const projects: Project[] = [{
   name: "Chat-O-Cord",
   description:
     "A full stack end to end chat application built with React as the frontend, Express.js as the backend, PostgreSQL as the database, Redis for session cache, Socket.io for real-time communication, Cloudinary for image storage. Last but not the least, it is then built with Electron to make it a desktop application.",

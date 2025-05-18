@@ -47,7 +47,7 @@ const About = () => {
       <hr className="bg-dark my-4 mt-[10rem] w-full h-[1px]" />
 
       <h2 className="w-full font-black text-4xl text-right">
-        Let's just be honest, I am a nerd, and I love to learn new things.
+        Let&apos;s just be honest, I am a nerd, and I love to learn new things.
       </h2>
 
       <hr className="bg-dark my-4 mb-[10rem] w-full h-[1px]" />

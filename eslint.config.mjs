@@ -10,7 +10,30 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends("next/core-web-vitals", "next/typescript",),
+  ...compat.config({
+    extends: ["next"],
+    rules: {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
+      "react/exhaustive-deps": [
+        "warn",
+        {
+          additionalHooks: "(useRecoilCallback|useRecoilValueLoadable)",
+        },
+      ],
+      "react-hooks/rules-of-hooks": "warn",
+    },
+  })
 ];
 
 export default eslintConfig;
