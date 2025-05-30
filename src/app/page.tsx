@@ -60,32 +60,34 @@ export default function Home() {
               alt="Loading..."
               width={100}
               height={100}
+              priority
             />
           </div>
         )
         : (
           <React.Fragment>
             <div className="flex flex-col w-full min-h-screen">
-              <section
-                className={`flex justify-between min-w-[${screenWidth}px] h-full relative gap-6`}
-              >
+              <section className="relative flex md:flex-row flex-col justify-between gap-4 md:gap-6 w-full hero-info-container">
                 <Hero height={screenHeight} />
                 <Info />
               </section>
-              <section id="about" className="p-20 about__section">
+              <section id="about" className="p-4 lg:p-20 about__section">
                 <About />
               </section>
-              <section id="projects" className="p-20 projects__section">
+              <section id="projects" className="p-4 lg:p-20 projects__section">
                 <Projects />
               </section>
             </div>
-            <Image
-              alt="bg"
-              src="/bg.svg"
-              width={screenWidth}
-              height={screenHeight}
-              className="-z-10 fixed inset-0 w-full h-full object-cover pointer-events-none select-none"
-            />
+            <div className="-z-10 fixed inset-0 w-full h-full pointer-events-none select-none">
+              <Image
+                alt="bg"
+                src="/bg.svg"
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
           </React.Fragment>
         )}
     </main>

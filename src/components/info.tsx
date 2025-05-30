@@ -4,7 +4,7 @@ import React from "react";
 
 const Info = () => {
   return (
-    <header className="p-20">
+    <header className="hidden md:block p-6 md:p-20">
       <nav className="flex justify-between items-center">
         <ul className="flex flex-col gap-4">
           <a

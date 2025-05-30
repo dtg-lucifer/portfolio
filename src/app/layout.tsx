@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo_Black, Space_Mono } from "next/font/google";
 import "./(root_assets)/globals.css";
 
@@ -28,6 +28,13 @@ export const metadata: Metadata = {
   title: "Piush Bose - Full Stack Developer",
   description:
     "Portfolio of Piush Bose - Full stack developer, DevOps Engineer, and Cloud Engineer",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

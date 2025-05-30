@@ -29,6 +29,7 @@ body {
   color: var(--foreground);
   /* Use the variable directly as defined in layout.tsx */
   font-family: var(--font-space-mono, monospace);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 @layer base {
@@ -42,11 +43,41 @@ body {
   .bg-dark {
     @apply bg-[#00341d];
   }
+  .fg-dark {
+    @apply text-[#00341d];
+  }
   .font-black {
     font-family: var(--font-archivo-black);
     font-weight: 400;
   }
   .font-secondary {
     @apply text-[#556B8C];
+  }
+
+  /* Project card styles */
+  article.grid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  article.grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 52, 29, 0.5), 0 4px 6px -2px rgba(0, 52, 29, 0.05);
+  }
+
+  /* Responsive headings */
+  h2.font-black {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-8xl;
+  }
+
+  /* Responsive sections */
+  section.p-20 {
+    @apply p-6 sm:p-10 md:p-16 lg:p-20;
+  }
+}
+
+/* Custom Media Queries for specific components */
+@media (max-width: 768px) {
+  .hero-info-container {
+    flex-direction: column;
   }
 }
