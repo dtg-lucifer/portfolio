@@ -1,5 +1,7 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import { FaReact } from "react-icons/fa";
 import { FaAws, FaGolang, FaJava, FaPython, FaRust } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
@@ -29,80 +31,193 @@ import {
 const About = () => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
-      <h2 className="w-full font-black text-6xl sm:text-8xl">
+      <motion.h2
+        className="w-full font-black text-6xl sm:text-8xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         Who am I?
-      </h2>
-      <h3 className="w-full font-secondary font-bold text-2xl">
+      </motion.h2>
+      <motion.h3
+        className="w-full font-secondary font-bold text-lg md:text-2xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         Cloud & DevOps Facilitator ~ Google DGoC TIU
-      </h3>
-      <h3 className="w-full font-secondary font-bold text-2xl">
+      </motion.h3>
+      <motion.h3
+        className="w-full font-secondary font-bold text-lg md:text-2xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
         Ex. Full Stack Developer ~ The Entrepreneurship Network
-      </h3>
-      <p className="mt-4 w-full text-base sm:text-2xl">
+      </motion.h3>
+      <motion.p
+        className="mt-4 w-full text-base sm:text-2xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 0.6 }}
+        viewport={{ once: true }}
+      >
         I am a software engineer with a passion for building applications that
         make a difference. I have experience in various technologies and love to
         learn new things.
-      </p>
+      </motion.p>
 
-      <hr className="bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]" />
+      <motion.hr
+        className="bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 0.8 }}
+        viewport={{ once: true }}
+      />
 
-      <h2 className="w-full font-black text-2xl sm:text-4xl">
+      <motion.h2
+        className="w-full font-black text-2xl sm:text-4xl"
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.0 }}
+        viewport={{ once: true }}
+      >
         Let&apos;s just be honest, I am a nerd, and I love to learn new things.
-      </h2>
+      </motion.h2>
 
-      <hr className="bg-dark my-4 mb-20 sm:mb-[10rem] w-full h-[1px]" />
+      <motion.hr
+        className="bg-dark my-4 mb-20 sm:mb-[10rem] w-full h-[1px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 1.1 }}
+        viewport={{ once: true }}
+      />
 
-      <h2 className="w-full font-black text-4xl">
+      <motion.h2
+        className="w-full font-black text-4xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.2 }}
+        viewport={{ once: true }}
+      >
         Frameworks I love
-      </h2>
-      <p className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl">
-        <FaReact size={40} />
-        <RiNextjsFill size={40} />
-        <SiTailwindcss size={40} />
-        <SiExpress size={40} />
-        <SiHono size={40} />
-        <SiVite size={40} />
-        <SiNestjs size={40} />
-        <SiGin size={40} />
-        <SiActix size={40} />
-      </p>
-      <hr className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]" />
-      <h2 className="w-full font-black text-4xl">
+      </motion.h2>
+      <motion.p
+        className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.3 }}
+        viewport={{ once: true }}
+      >
+        <FaReact className="text-[25px] md:text-[40px]" />
+        <RiNextjsFill className="text-[25px] md:text-[40px]" />
+        <SiTailwindcss className="text-[25px] md:text-[40px]" />
+        <SiExpress className="text-[25px] md:text-[40px]" />
+        <SiHono className="text-[25px] md:text-[40px]" />
+        <SiVite className="text-[25px] md:text-[40px]" />
+        <SiNestjs className="text-[25px] md:text-[40px]" />
+        <SiGin className="text-[25px] md:text-[40px]" />
+        <SiActix className="text-[25px] md:text-[40px]" />
+      </motion.p>
+
+      <motion.hr
+        className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 1.4 }}
+        viewport={{ once: true }}
+      />
+
+      <motion.h2
+        className="w-full font-black text-4xl"
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.5 }}
+        viewport={{ once: true }}
+      >
         Languages I know
-      </h2>
-      <p className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl y-4">
-        <SiTypescript size={35} />
-        <FaGolang size={40} />
-        <FaRust size={40} />
-        <FaJava size={40} />
-        <FaPython size={40} />
-        <SiCplusplus size={35} />
-      </p>
-      <hr className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]" />
-      <h2 className="w-full font-black text-4xl">
+      </motion.h2>
+      <motion.p
+        className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl y-4"
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.6 }}
+        viewport={{ once: true }}
+      >
+        <SiTypescript className="text-[25px] md:text-[40px]" />
+        <FaGolang className="text-[25px] md:text-[40px]" />
+        <FaRust className="text-[25px] md:text-[40px]" />
+        <FaJava className="text-[25px] md:text-[40px]" />
+        <FaPython className="text-[25px] md:text-[40px]" />
+        <SiCplusplus className="text-[25px] md:text-[40px]" />
+      </motion.p>
+
+      <motion.hr
+        className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 1.7 }}
+        viewport={{ once: true }}
+      />
+
+      <motion.h2
+        className="w-full font-black text-4xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.8 }}
+        viewport={{ once: true }}
+      >
         Tools I use
-      </h2>
-      <p className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl">
-        <BiLogoVisualStudio size={40} />
-        <SiIntellijidea size={35} />
-        <SiPostman size={35} />
-        <SiDocker size={35} />
-      </p>
-      <hr className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]" />
-      <h2 className="w-full font-black text-4xl">
+      </motion.h2>
+      <motion.p
+        className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl"
+        initial={{ x: -300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 1.9 }}
+        viewport={{ once: true }}
+      >
+        <BiLogoVisualStudio className="text-[25px] md:text-[40px]" />
+        <SiIntellijidea className="text-[25px] md:text-[40px]" />
+        <SiPostman className="text-[25px] md:text-[40px]" />
+        <SiDocker className="text-[25px] md:text-[40px]" />
+      </motion.p>
+
+      <motion.hr
+        className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, delay: 2.0 }}
+        viewport={{ once: true }}
+      />
+
+      <motion.h2
+        className="w-full font-black text-4xl"
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 2.1 }}
+        viewport={{ once: true }}
+      >
         Cloud & DevOps stuffs that I use
-      </h2>
-      <p className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl">
-        <SiGooglecloud size={35} />
-        <FaAws size={40} />
-        <SiKubernetes size={35} />
-        <SiAnsible size={35} />
-        <SiTerraform size={35} />
-        <SiGitlab size={35} />
-        <SiGrafana size={35} />
-        <SiPrometheus size={35} />
-      </p>
-      <hr className="md:hidden bg-dark my-4 mt-20 sm:mt-[10rem] w-full h-[1px]" />
+      </motion.h2>
+      <motion.p
+        className="flex flex-wrap gap-4 mt-4 mb-8 w-full text-base sm:text-2xl"
+        initial={{ x: 300, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0.4, delay: 2.2 }}
+        viewport={{ once: true }}
+      >
+        <SiGooglecloud className="text-[25px] md:text-[40px]" />
+        <FaAws className="text-[25px] md:text-[40px]" />
+        <SiKubernetes className="text-[25px] md:text-[40px]" />
+        <SiAnsible className="text-[25px] md:text-[40px]" />
+        <SiTerraform className="text-[25px] md:text-[40px]" />
+        <SiGitlab className="text-[25px] md:text-[40px]" />
+        <SiGrafana className="text-[25px] md:text-[40px]" />
+        <SiPrometheus className="text-[25px] md:text-[40px]" />
+      </motion.p>
     </div>
   );
 };

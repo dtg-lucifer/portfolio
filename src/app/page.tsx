@@ -8,6 +8,7 @@ import Projects from "@/components/projects";
 import LocomotiveScroll from "locomotive-scroll";
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [screenHeight, setScreenHeight] = useState<number>(0);
@@ -51,11 +52,29 @@ export default function Home() {
     };
   }, []);
 
+  // Section animation variants
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <main className="scroll-smooth" style={{ scrollBehavior: "smooth" }}>
       {loading
         ? (
-          <div className="z-50 fixed inset-0 flex justify-center items-center">
+          <motion.div
+            className="z-50 fixed inset-0 flex justify-center items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
             <Image
               src="/loading.svg"
               alt="Loading..."
@@ -63,24 +82,53 @@ export default function Home() {
               height={100}
               priority
             />
-          </div>
+          </motion.div>
         )
         : (
           <React.Fragment>
             <div className="flex flex-col w-full min-h-screen">
-              <section className="relative flex md:flex-row flex-col justify-between gap-4 md:gap-6 w-full hero-info-container">
+              <motion.section
+                className="relative flex md:flex-row flex-col justify-between gap-4 md:gap-6 w-full hero-info-container"
+                initial="hidden"
+                animate="visible"
+                variants={sectionVariants}
+              >
                 <Hero height={screenHeight} />
                 <Info />
-              </section>
-              <section id="about" className="p-4 lg:p-20 about__section">
+              </motion.section>
+
+              <motion.section
+                id="about"
+                className="p-4 lg:p-20 about__section"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 <About />
-              </section>
-              <section id="projects" className="p-4 lg:p-20 projects__section">
+              </motion.section>
+
+              <motion.section
+                id="projects"
+                className="p-4 lg:p-20 projects__section"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 <Projects />
-              </section>
-              <section id="contact" className="p-4 lg:p-20 projects__section">
+              </motion.section>
+
+              <motion.section
+                id="contact"
+                className="p-4 lg:p-20 projects__section"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 <Contact />
-              </section>
+              </motion.section>
             </div>
             <div className="-z-10 fixed inset-0 w-full h-full pointer-events-none select-none">
               <Image

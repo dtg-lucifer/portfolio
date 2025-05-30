@@ -1,10 +1,16 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Info = () => {
   return (
-    <header className="hidden md:block p-6 md:p-20">
+    <motion.header
+      className="hidden md:block p-6 md:p-20"
+      initial={{ x: 100 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.5, type: "spring", bounce: 0.4 }}
+    >
       <nav className="flex justify-between items-center">
         <ul className="flex flex-col gap-4">
           <a
@@ -27,7 +33,7 @@ const Info = () => {
           </a>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 
