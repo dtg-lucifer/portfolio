@@ -5,6 +5,7 @@ export interface Project {
   repoUrl: string;
   demoUrl: string;
   tags: string[];
+  wip: boolean;
 }
 
 export const projects: Project[] = [{
@@ -20,6 +21,7 @@ export const projects: Project[] = [{
     "Socket.io",
     "Electron",
   ],
+  wip: false,
 }, {
   name: "Starty",
   description:
@@ -32,6 +34,49 @@ export const projects: Project[] = [{
     "TailwindCSS",
     "Sanity.io",
   ],
+  wip: true,
+}, {
+  name: "RustyKV",
+  description:
+    "Rusty KV Store is a lightweight Redis-compatible server that implements Redis commands using Rust's async I/O capabilities with Tokio. This project aims to provide a high-performance, memory-efficient alternative to Redis while maintaining protocol compatibility. It comes with pre-built cli client built with C++",
+  repoUrl: "https://github.com/rusty-org/rusty-kv",
+  demoUrl: "https://github.com/rusty-org/rusty-kv",
+  image: "/projects/rustykv_demo.webp",
+  tags: [
+    "Rust",
+    "C++",
+    "Multithreading",
+    "Redis",
+  ],
+  wip: true,
+}, {
+  name: "Everato",
+  description:
+    "Open source solution for in-person and online event organisation and management, in replacement of Konfhub",
+  repoUrl: "https://github.com/dtg-lucifer/everato",
+  demoUrl: "https://github.com/dtg-lucifer/everato",
+  image: "/projects/wip.webp",
+  tags: [
+    "Go",
+    "Next.js@15",
+  ],
+  wip: true,
+}, {
+  name: "CI CD Pipeline to deploy on GCP (Docker Swarm)",
+  description:
+    "This project includes a python application to monitor server health which stores last 5 logs into redis cache which is replicated and deployed on 2 node docker swarm cluster on GCP",
+  repoUrl: "https://github.com/dtg-lucifer/redis-docker-swarm-devops-project",
+  demoUrl:
+    "https://devpiush.hashnode.dev/learn-to-deploy-your-application-on-a-docker-swarm-cluster-step-by-step-guide-with-code",
+  image: "/projects/docker_swarm_demo.webp",
+  tags: [
+    "Docker Swarm",
+    "GCP",
+    "Redis",
+    "Python",
+    "Microservices",
+  ],
+  wip: false,
 }];
 
 export const useProjects = async (): Promise<Project[]> => {

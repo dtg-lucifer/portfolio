@@ -1,6 +1,7 @@
 "use client";
 
 import About from "@/components/about";
+import Contact from "@/components/contact";
 import Hero from "@/components/hero";
 import Info from "@/components/info";
 import Projects from "@/components/projects";
@@ -76,6 +77,9 @@ export default function Home() {
               </section>
               <section id="projects" className="p-4 lg:p-20 projects__section">
                 <Projects />
+              </section>
+              <section id="contact" className="p-4 lg:p-20 projects__section">
+                <Contact />
               </section>
             </div>
             <div className="-z-10 fixed inset-0 w-full h-full pointer-events-none select-none">

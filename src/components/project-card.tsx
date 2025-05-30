@@ -1,13 +1,17 @@
 import { Project } from "@/hooks/useProjects";
 import Image from "next/image";
 import React from "react";
+import Chip from "./ui/chip";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <article className="grid grid-rows-[auto_1fr_auto_auto_auto] bg-light/50 sm:p-6 md:p-4 pb-8 rounded-lg h-full">
-      <h3 className="mb-2 sm:mb-4 font-bold text-2xl sm:text-3xl md:text-4xl">
-        {project.name}
-      </h3>
+      <div className="flex items-center gap-2 mb-2 sm:mb-4">
+        <h3 className="font-bold text-2xl sm:text-3xl md:text-4xl">
+          {project.name}
+        </h3>
+        {project.wip && <Chip>Wip</Chip>}
+      </div>
       <p className="self-start mb-3 sm:mb-4 text-base sm:text-lg">
         {project.description}
       </p>
@@ -26,7 +30,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           href={project.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 text-sm sm:text-base hover:underline"
+          className="hover:bg-[#822bf3] px-2 py-1 text-[#822bf3] hover:text-[#dddad1] text-sm sm:text-base"
         >
           View Code
         </a>
@@ -34,7 +38,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           href={project.demoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 text-sm sm:text-base hover:underline"
+          className="hover:bg-[#822bf3] px-2 py-1 text-[#822bf3] hover:text-[#dddad1] text-sm sm:text-base"
         >
           View Demo
         </a>

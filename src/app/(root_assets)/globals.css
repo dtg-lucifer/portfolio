@@ -46,6 +46,9 @@ body {
   .fg-dark {
     @apply text-[#00341d];
   }
+  .fg-light {
+    @apply text-[#dddad1];
+  }
   .font-black {
     font-family: var(--font-archivo-black);
     font-weight: 400;

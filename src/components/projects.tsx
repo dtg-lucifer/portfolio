@@ -18,7 +18,7 @@ const Projects = () => {
       <h2 className="mb-6 md:mb-10 lg:mb-20 w-full font-black text-5xl md:text-7xl">
         Some of my best projects
       </h2>
-      <aside className="gap-4 sm:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full">
+      <aside className="gap-4 sm:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-4 w-full">
         {projects.map((project) => (
           <ProjectCard
             key={project.name.split(" ").join("-").toLowerCase()}
@@ -26,6 +26,9 @@ const Projects = () => {
           />
         ))}
       </aside>
+      <div className="p-8 w-full text-4xl md:text-6xl text-center">
+        And many more...
+      </div>
     </div>
   );
 };
