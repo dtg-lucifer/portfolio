@@ -27,7 +27,14 @@ const archivoBlack = Archivo_Black({
 export const metadata: Metadata = {
   title: "Piush Bose - Full Stack Developer",
   description:
-    "Portfolio of Piush Bose - Full stack developer, DevOps Engineer, and Cloud Engineer",
+    "An Indie Full stack developer, DevOps Engineer, Cloud Engineer and soon to be Embedded Systems Developer. I love building things that solve real-world problems.",
+  openGraph: {
+    title: "Piush Bose - Full Stack Developer",
+    description:
+      "An Indie Full stack developer, DevOps Engineer, Cloud Engineer and soon to be Embedded Systems Developer. I love building things that solve real-world problems.",
+    url: "https://me.piush.dev",
+    siteName: "Piush Bose",
+  },
 };
 
 export const viewport: Viewport = {
