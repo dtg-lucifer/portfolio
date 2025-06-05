@@ -34,7 +34,7 @@ export const projects: Project[] = [{
     "TailwindCSS",
     "Sanity.io",
   ],
-  wip: true,
+  wip: false,
 }, {
   name: "RustyKV",
   description:
@@ -75,6 +75,18 @@ export const projects: Project[] = [{
     "Redis",
     "Python",
     "Microservices",
+  ],
+  wip: false,
+}, {
+  name: "Inside Out Tea",
+  description:
+    "Collaboration on a Tea Business Startup that offers a unique tea selection based on individual moods. Whether you're feeling stressed, happy, or adventurous, our platform helps you find the perfect tea flavor to match your mood",
+  repoUrl: "https://github.com/dtg-lucifer/inside-out-tea",
+  demoUrl: "https://inside-out-tea.vercel.app/",
+  image: "/projects/insideout_demo.webp",
+  tags: [
+    "Next.js@15",
+    "TailwindCSS",
   ],
   wip: false,
 }];
